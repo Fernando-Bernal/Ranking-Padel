@@ -1,4 +1,4 @@
-import { GET_USER, CLEAR_USER } from "./actions";
+import { GET_USER, CLEAR_USER, GET_JUGADORES } from "./actions";
 
 const initialState = {
 	user: null,
@@ -8,6 +8,11 @@ const initialState = {
 
 export function reducerApp(state = initialState, action) {
 	switch (action.type) {
+		case GET_JUGADORES:
+			return {
+				...state,
+				jugadores: action.payload,
+			};
 		case GET_USER:
 			return {
 				...state,
