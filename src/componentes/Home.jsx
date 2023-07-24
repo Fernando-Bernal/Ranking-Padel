@@ -2,6 +2,7 @@ import React from 'react';
 import Position from './Position';
 import styled from 'styled-components';
 import cancha from '../assets/canchaPadel.webp';
+import Fechas from './Fechas';
 
 const Home = () => {
 
@@ -9,7 +10,7 @@ const Home = () => {
   return (
     <Contairner>
       <Position />
-
+      <Fechas />
     </Contairner>
   );
 };

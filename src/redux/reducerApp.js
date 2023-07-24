@@ -1,9 +1,9 @@
-import { GET_USER, CLEAR_USER, GET_JUGADORES } from "./actions";
+import { GET_USER, CLEAR_USER, GET_JUGADORES , GET_FECHAS} from "./actions";
 
 const initialState = {
 	user: null,
 	jugadores: [],
-	fechas: [],
+	resultados: [],
 };
 
 export function reducerApp(state = initialState, action) {
@@ -12,6 +12,11 @@ export function reducerApp(state = initialState, action) {
 			return {
 				...state,
 				jugadores: action.payload,
+			};
+		case GET_FECHAS:
+			return {
+				...state,
+				resultados: action.payload,
 			};
 		case GET_USER:
 			return {

@@ -6,6 +6,7 @@ export const GET_USER = "GET_USER";
 export const CLEAR_USER = "CLEAR_USER";
 
 export const GET_JUGADORES = "GET_JUGADORES";
+export const GET_FECHAS = "GET_FECHAS";
 
 //* GET JUGADORES ordenados por pt
 export function getJugadores() {
@@ -45,4 +46,21 @@ export function getJugadores() {
 	};
 }
 
-
+export function getFechas(fecha){
+	return async function (dispatch) {
+		try {
+			const fechasRef = ref(db, `Torneo1/${fecha}`);
+			const snapshot = await new Promise((resolve, reject) => {
+				onValue(fechasRef, resolve, reject);
+			});
+			let fechas = [];
+			snapshot.forEach((childSnapshot) => {
+				const fechaData = childSnapshot.val();
+				fechas.push(fechaData);
+			});
+			dispatch({ type: GET_FECHAS, payload: fechas });
+		} catch (error) {
+			console.log(error);
+		}
+	};
+}

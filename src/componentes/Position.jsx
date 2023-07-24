@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { getJugadores } from "../redux/actions";
+import Card from "./Card";
 
 function Position() {
     const dispatch = useDispatch();
@@ -56,13 +57,12 @@ const DivTitulo = styled.h2`
 	position: relative;
 	margin: 10px auto;
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: bold;
 	color: #dbdee1;
 `;
 
 const DivTabla = styled.div`
-	width: 100%;
 	height: auto;
 	position: relative;
 	margin: auto;
