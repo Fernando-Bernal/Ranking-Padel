@@ -46,7 +46,7 @@
 // 	font-size: 16px;
 // 	color: #666;
 // `;
-// const ContactLabel = styled.label`
+// const ContactContactLabel = styled.ContactLabel`
 // 	font-size: 16px;
 // 	font-weight: 600;
 // 	display: block;
@@ -99,7 +99,7 @@
 // 			//fomulario para cambiar los campos del usuario
 // 			<ContactWrapper>
 // 				<form>
-// 					<ContactLabel>Nombre</ContactLabel>
+// 					<ContactContactLabel>Nombre</ContactContactLabel>
 // 					<Input
 // 						type="text"
 // 						name="name"
@@ -108,7 +108,7 @@
 // 						onChange={(e) => handleChanges(e)}
 // 					/>
 // 					<MyAccountBtn onClick={changeName}>Cambiar nombre</MyAccountBtn>
-//                     <ContactLabel>Password</ContactLabel>
+//                     <ContactContactLabel>Password</ContactContactLabel>
 // 					<Input
 // 						type="password"
 // 						name="password"

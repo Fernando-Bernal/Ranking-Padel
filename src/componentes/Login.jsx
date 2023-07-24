@@ -41,11 +41,11 @@
 //         <LoginH2>Iniciar sesion </LoginH2>
 //         <form onSubmit={handleSubmit}>
 //           <div>
-//             <LoginLabel >Dirección Email:</LoginLabel>
+//             <LoginContactLabel >Dirección Email:</LoginContactLabel>
 //             <Input name="email" onChange={handleChanges} type="email" />
 //           </div>
 //           <div>
-//             <LoginLabel>Contraseña:</LoginLabel>
+//             <LoginContactLabel>Contraseña:</LoginContactLabel>
 //             <Input name="password" onChange={handleChanges} type="password" />
 //           </div>
 //           <LoginBtn>Iniciar Sesion</LoginBtn>
@@ -94,7 +94,7 @@
 // padding: 0;
 // margin-bottom: 25px;
 // `
-// const LoginLabel = styled.label`
+// const LoginContactLabel = styled.ContactLabel`
 // display: block;
 // font-size: 20px;
 // text-shadow: rgb(102, 102, 102) 1px 1px 1px;

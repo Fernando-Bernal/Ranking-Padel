@@ -22,7 +22,7 @@
 // 	margin: 0;
 // 	padding: 0;
 // `;
-// const LoginLabel = styled.label`
+// const LoginContactLabel = styled.ContactLabel`
 // 	display: block;
 // 	font-size: 20px;
 // 	//text-shadow: rgb(102, 102, 102) 1px 1px 1px;
@@ -83,11 +83,11 @@
 // 				<form onSubmit={handleSubmit}>
 
 // 					<div>
-// 						<LoginLabel>Dirección Email:</LoginLabel>
+// 						<LoginContactLabel>Dirección Email:</LoginContactLabel>
 // 						<Input name="email" onChange={handleChanges} type="email" />
 // 					</div>
 // 					<div>
-// 						<LoginLabel>Contraseña:</LoginLabel>
+// 						<LoginContactLabel>Contraseña:</LoginContactLabel>
 // 						<Input
 // 							name="password"
 // 							onChange={handleChanges}

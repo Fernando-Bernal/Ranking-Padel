@@ -1,9 +1,11 @@
-import { GET_USER, CLEAR_USER, GET_JUGADORES , GET_FECHAS} from "./actions";
+import { GET_USER, CLEAR_USER, GET_JUGADORES , GET_FECHAS, ADD_FECHA,} from "./actions";
 
 const initialState = {
 	user: null,
 	jugadores: [],
 	resultados: [],
+	fechas: [],
+	competencias: ["Padel", "Cruzado", "Truco", "Siete", "Podrida"]
 };
 
 export function reducerApp(state = initialState, action) {
@@ -17,6 +19,11 @@ export function reducerApp(state = initialState, action) {
 			return {
 				...state,
 				resultados: action.payload,
+			};
+		case ADD_FECHA:
+			return {
+				...state,
+				fechas: [...state.fechas, action.payload],
 			};
 		case GET_USER:
 			return {

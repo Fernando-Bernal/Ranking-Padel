@@ -1,4 +1,4 @@
-import { ref, onValue, orderByChild } from "firebase/database";
+import { ref, onValue, orderByChild, set} from "firebase/database";
 import { StartFirebase } from "../services/index";
 const db = StartFirebase();
 
@@ -7,6 +7,8 @@ export const CLEAR_USER = "CLEAR_USER";
 
 export const GET_JUGADORES = "GET_JUGADORES";
 export const GET_FECHAS = "GET_FECHAS";
+export const ADD_FECHA = "ADD_FECHA";
+export const ADD_DATA = "ADD_DATA";
 
 //* GET JUGADORES ordenados por pt
 export function getJugadores() {
@@ -64,3 +66,19 @@ export function getFechas(fecha){
 		}
 	};
 }
+// funcion para crear una nueva collection en la debe torneo1, con el nombre de fecha1, fecha2 para luego agregarle los partidos
+export function crearFecha(fecha) {
+	return async function (dispatch) {
+		try {
+			const fechaRef = ref(db, `Torneo1/${fecha}`);
+			await set(fechaRef, {
+				fecha: fecha,
+			});
+			dispatch({ type: ADD_FECHA, payload: fecha });
+		} catch (error) {
+			console.log(error);
+		}
+	};
+}
+
+// funcion para tomar una fecha y agregarle el objeto data
