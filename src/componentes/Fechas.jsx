@@ -138,15 +138,16 @@ const BtnFecha = styled.button`
 	cursor: pointer;
 	outline: none;
 
-	&:hover {
-		background-color: #c9df1d;
-		color: #111;
-	}
 
 	&:active {
 		background-color: #c9df1d;
 		color: #f8f9fa;
 	}
+
+  &:focus {
+    background-color: #c9df1d;
+    color: #f8f9fa;
+  }
 `;
 
 const DivTitulo = styled.h2`

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { getJugadores } from "../redux/actions";
-import Card from "./Card";
 
 function Position() {
     const dispatch = useDispatch();
