@@ -107,7 +107,7 @@ const DivContainer = styled.div`
   width: 100%;
   height: auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   padding-bottom: 20px;
   border-radius: 10px;
 

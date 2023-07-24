@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Position from './Position';
 import styled from 'styled-components';
 import cancha from '../assets/canchaPadel.webp';
 import Fechas from './Fechas';
+import pelota from '../assets/pelota.png';
 
 const Home = () => {
 
@@ -11,6 +13,9 @@ const Home = () => {
     <Contairner>
       <Position />
       <Fechas />
+      <Link to="/admin">
+        <Img src={pelota} alt="" />
+      </Link>
     </Contairner>
   );
 };
@@ -38,6 +43,20 @@ const Contairner = styled.div`
     padding: 20px;
   }
   
+`;
+
+const Img = styled.img`
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+  @media (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 

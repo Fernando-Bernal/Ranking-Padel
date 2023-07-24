@@ -58,7 +58,10 @@ const DivTitulo = styled.h2`
 	text-align: center;
 	font-size: 2rem;
 	font-weight: bold;
-	color: #dbdee1;
+	color: #c9df1d;
+    background-color: #000000d6;
+    width: fit-content;
+    border-radius: 10px;
 `;
 
 const DivTabla = styled.div`
@@ -66,7 +69,7 @@ const DivTabla = styled.div`
 	position: relative;
 	margin: auto;
 	border-radius: 10px;
-	background-color: #f8f9fa;
+	background-color: #f8f9faca;
 	box-shadow: 0 0 10px #6905c6;
 	margin-bottom: 20px;
 	overflow: auto;
@@ -80,10 +83,10 @@ const DivTabla = styled.div`
 
 
 const Td = styled.td`
-	font-size: 0.7rem;
+	font-size: 0.8rem;
 	text-align: center;
 	vertical-align: middle;
-
+    font-weight: bold;
 	@media (min-width: 768px) {
 		font-size: 1rem;
 	}
